@@ -173,7 +173,10 @@ export const Fields = () => {
             let currentProps;
 
             if (selectedItem) {
-              currentProps = selectedItem.props;
+              currentProps = {
+                ...selectedItem.props,
+                rootProps,
+              };
             } else {
               currentProps = rootProps;
             }
